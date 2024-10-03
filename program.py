@@ -6,7 +6,8 @@ url = "https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv"
 response = requests.get(url)
 
 # Save the CSV file locally
-csv_path = "/root/taxi_zone_lookup.csv"
+csv_path = "C:/Users/Riya/OneDrive/Desktop/taxi_zone_lookup.csv"
+
 with open(csv_path, 'wb') as file:
     file.write(response.content)
 
@@ -31,7 +32,8 @@ brooklyn_records = [row for row in records if row[1] == 'Brooklyn']
 brooklyn_count = len(brooklyn_records)
 
 # d. Save the results to a file
-output_path = "/root/taxi_zone_output.txt"
+output_path = "C:/Users/Riya/OneDrive/Desktop/taxi_zone_output.txt"
+
 with open(output_path, 'w') as output_file:
     output_file.write(f"Total Records (sorted ascending): {total_records}\n")
     output_file.write(f"Unique Boroughs: {', '.join(unique_boroughs)}\n")
